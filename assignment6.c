@@ -13,7 +13,7 @@ int main(int argc, const char * argv[]) {
     
     // Problem3 - 1
     int age;
-    printf("Enter your age...");
+    printf("Enter your age...\n");
     scanf ("%d",&age);
     printf ("Your age is : %d\n", age);
     if (age < 20)
@@ -43,20 +43,20 @@ int main(int argc, const char * argv[]) {
     
     // Problem3 - 3
     int number;
-    printf("Enter a number between 0 and 99999");
+    printf("Enter a number between 0 and 99999\n");
     scanf ("%d",&number);
     int count = 0;
     while(number != 0)
     {
         number /= 10;
-        ++count;
+        count++;
     }
     printf("The number of degit is %d",count);
     printf("\n");
 
     // Problem3 - 4
     int number1;
-    printf("Enter a number between 0 and 200");
+    printf("Enter a number between 0 and 200\n");
     scanf ("%d",&number1);
     if (200 < number1)
     {
@@ -66,11 +66,11 @@ int main(int argc, const char * argv[]) {
     {
         if (number1 % 2 == 1)
         {
-            printf("The number is odd");
+            printf("The number is odd\n");
         }
         else
         {
-            printf("The number is even");
+            printf("The number is even\n");
         }
     }
     
