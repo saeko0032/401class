@@ -16,31 +16,41 @@ int main(int argc, const char * argv[]) {
     srand((unsigned)(time(NULL)));
     long counter = getRandInterval(0, 100);
     
-    // odd then + 1
+    // if counter is odd, + 1
+    // (ex)53 - > 54
     if ( counter % 2 == 1)
     {
         counter++;
     }
-    // even then + 2
+    // if counter is even, + 2
+    // (ex)52 - > 54
     else
     {
         counter += 2;
     }
-    // save number for problem2 - 2
-    long counter1 = counter;
+    // save number for problem 2 - 2
+    long counter1,counter2 = counter;
     
     // problem 2 - 1
+    // Using a for-loop, print the first 10 even number that are bigger than counter
     for (int i = 0; i < 10; i++)
     {
         printf("%ld\n",counter);
         counter += 2;
     }
     
-    //problem 2 - 2
+    // problem 2 - 2
+    // Print all even numbers which are bigger than the counterand less than 200
     for (; counter1 < 200; counter1 += 2)
     {
         printf("%ld\n",counter1);
-        
+    }
+    
+    // problem 2 - 3
+    // Print all even numbers which are less than 200
+    for (; counter2 < 200; counter2 -= 2)
+    {
+        printf("%ld\n",counter2);
     }
 
     return 0;
