@@ -1,0 +1,34 @@
+<<Bonus>>
+
+What is argc?
+
+=> argc is a parameter that we can see it when we start main method. ./hello hello world
+main(int argh = 3) 3 parameters
+argv[0] ./hello
+argv[1] hello
+argv[2] world
+
+What is argv[]?
+=>arcv[] is a changeable array parameters that we can see them when we start main method.
+
+How to use argc and argv?
+=>see below.
+Provide an example
+=> see below.
+
+hello.c
+
+int main(int argc, const char * argv[])
+{
+}
+
+make hello
+
+=>
+./hello hello world ssssss
+argh = 4
+argv[0] ./hello
+argv[1] hello
+argv[2] world
+argv[3] sssss
+
