@@ -16,10 +16,11 @@ int main(int argc, const char * argv[]) {
     srand((unsigned)(time(NULL)));
     long counter = getRandInterval(0, 10);
     long i, j = 0;
-    for(j = counter; j > 0; j--)
-    {
+    
+    for(j = counter; 0 < j; j--)
+    { // (ex)counter=5 then j=5,4,3,2,1
         for(i = 1; i <= j; i++)
-        {
+        { // (ex) i=1,2,3,4,5
            printf("*");
         }
         printf("\n");
