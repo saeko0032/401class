@@ -18,9 +18,9 @@ int main(int argc, const char * argv[]) {
     
     long i,j = 0;
     for (j = 1; j <= counter; j++)
-    {
+    { // (ex)counter=5, j=1,2,3,4,5
         for (i = 1; i <= j; i++)
-        {
+        { // (ex)i=1,2,3,4,5
             printf("*");
         }
         printf("\n");
