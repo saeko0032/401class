@@ -31,10 +31,19 @@ int main(int argc, const char * argv[]) {
         num1 += 2;
     }
     printf("***** problem1 - 3 *****\n");
+    
     // problem 1 - 3
-    for (int j = 60; j < 200; j += 2)
+    // Print all even numbers which are bigger than the index
+    for (int j = 0; num2 < 200; num += 2)
     {
-         printf("%d\n",j);
+         printf("%d\n",num2);
+    }
+    
+    // problem 1 - 4
+    // Print all even numbers which are less than the index
+    for (int k = 0; num3 > 200; num3 -= 2)
+    {
+         printf("%d\n",num3);
     }
     return 0;
 }
