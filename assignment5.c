@@ -15,21 +15,19 @@ unsigned getRandInterval(unsigned begin, unsigned end);
 int main(int argc, const char * argv[]) {
     srand((unsigned)(time(NULL)));
     long counter = getRandInterval(8, 14);
+    if ( counter %2 == 1) counter++; // counter number must be even
     
-   // printf("%ld",counter);
-    if ( counter %2 == 1) counter++;
     long i,j = 0;
     
-    for(j=counter; j>0; j = j/2)
-    {
-        // j = 9,4,2,1
-        for (int k=0; k < (4 - j / 2); k++)
-        {
+    for(j=counter; 0 < j; j = j/2)
+    { // (ex)counter=8,j=8,4,2,1
+        for (int k = 0; k < (counter - j) / 2; k++)
+        { // (ex)j=0 k=0, j=4 k=2, 
             printf(" ");
         }
         
         for(i = 0; i < j; i++)
-        {
+        { // (ex)j=8,i = 8,4,2,1
             printf("*");
         }
         printf("\n");
