@@ -7,35 +7,41 @@
 //
 
 #include <stdio.h>
-#include "string.h"
+#include <string.h>
 
-void printFancyCode(char* name[], int number);
-void printFancyCode2(char* name[], int number);
+void printFancyCode(char* name, unsigned long number);
+void printFancyCode2(char* name, unsigned long number);
+
 int main(int argc, const char * argv[]) {
     
-    char name[] = "saeko";
-    int nameLength = strlen(name);
+    char name[5] = "Saeko";
+    
+    unsigned long nameLength;
+    nameLength = strlen(name);
     printFancyCode(name, nameLength);
+    printFancyCode2(name, nameLength);
     return 0;
 }
-void printFancyCode(char* name[], int number)
+void printFancyCode(char *name, unsigned long number)
 {
+
     printf("***********\n");
     printf("**Hello****\n");
-    // insert
+    printf("**%c%c%c%c%c**\n",name[0],name[1],name[2],name[3],name[4]);
     printf("**Welcome**\n");
     printf("**To*******\n");
     printf("**CICCC****\n");
     printf("***********\n");
+    printf("\n\n\n");
 }
 
-void printFancyCode2(char* name[], int number)
+void printFancyCode2(char *name, unsigned long number)
 {
     printf("***********\n");
-    printf("* Hello  \n");
-    // insert
+    printf("* Hello  *\n");
+    printf("* %c%c%c%c%c *\n",name[0],name[1],name[2],name[3],name[4]);
     printf("* Welcome *\n");
-    printf("* To     \n");
-    printf("* CICCC  \n");
+    printf("* To     *\n");
+    printf("* CICCC  *\n");
     printf("***********\n");
 }
