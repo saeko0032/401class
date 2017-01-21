@@ -14,7 +14,7 @@ int checkPrimeNumber(int number);
 int main(int argc, const char * argv[]) {
     int number1 = 2;
     int number2 = 5;
-    for(int i = number1; i<=number2; i++)
+    for(int i = number1; i <= number2; i++)
     {
         int result = checkPrimeNumber(i);
         if(result == 1)
