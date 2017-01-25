@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <float.h>
-float checkMinAndMax(float originArrays[5]);
+float checkMinAndMax(float originArrays[]);
 
 int main(int argc, const char * argv[]) {
     float orgArrays[5] = {3.2, 5.8, 0.3, 7.0, 0.4};
