@@ -17,11 +17,11 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
  // address
-float checkMinAndMax(float originArrays[5])
+float checkMinAndMax(float originArrays[])
 {
     float minNumber = originArrays[0];
     float maxNumber = originArrays[0];
-    for(int i=0;i<5;i++)
+    for(int i = 0; i < 5; i++)
     {
         // for float compare, we need FLT_EXPSILON
         if((originArrays[i] - originArrays[i+1]) < FLT_EPSILON)
