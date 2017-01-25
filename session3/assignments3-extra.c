@@ -49,7 +49,7 @@ void checkNumbers(int orgArrays[], long number)
             if (sum == number)
             {
                 found = 1;
-                printf("we know array[%d](%d) + array[%d](%d) is same as %d\n", j, orgArrays[j], i, number);
+                printf("we know array[%d](%d) + array[%d](%d) is same as %d\n", j, orgArrays[j], i, orgArrays[i], number);
             }
         }
     }
