@@ -38,12 +38,12 @@ unsigned getRandInterval(unsigned begin, unsigned end)
     return(randVal % range) + begin;
 }
 
-void checkNumbers(int orgArrays[20], long number)
+void checkNumbers(int orgArrays[], long number)
 {
     int found = -1;
     for(int i = 0; i < 20; i++)
     {
-        for(int j = 0; j <20; j++)
+        for(int j = 0; j < 20; j++)
         {
             int sum = orgArrays[j] * orgArrays[i];
             if (0 < sum && sum < 2000)
