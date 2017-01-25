@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-int findIndexNumber(int originArrays[5], int number);
+int findIndexNumber(int originArrays[], int number);
 
 int main(int argc, const char * argv[]) {
     int orgArrays[5] = {32, 58, 3, 7, 4};
@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
         return 0;
 }
 
-int findIndexNumber(int originArrays[5], int number)
+int findIndexNumber(int originArrays[], int number)
 {
     int result = -1;
     for(int i = 0; i < 5; i++)
