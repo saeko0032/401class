@@ -20,11 +20,9 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
  // address
-int* makeNewArray(int originArrays[5])
+int* makeNewArray(int originArrays[])
 {
-    
-    
-    for(int i=0;i<5;i++)
+    for(int i = 0; i < 5; i++)
     {
         newArrays[i] = originArrays[i];
     }
