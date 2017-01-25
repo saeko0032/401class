@@ -45,16 +45,16 @@ void checkNumbers(int orgArrays[], long number)
     {
         for(int j = 0; j < 20; j++)
         {
-            int sum = orgArrays[j] * orgArrays[i];
+            int sum = orgArrays[j] + orgArrays[i];
             if (0 < sum && sum < 2000)
             {
                 found = 1;
-                printf("we know array[%d](%d) * array[%d](%d) is within 2000\n", j, orgArrays[j], i, orgArrays[i]);
+                printf("we know array[%d](%d) + array[%d](%d) is within 2000\n", j, orgArrays[j], i, orgArrays[i]);
             }
         }
     }
     if (found == -1)
     {
-        printf("the sum of random numbers are under 2000...");
+        printf("the sum of random numbers have to be under 2000...");
     }
 }
