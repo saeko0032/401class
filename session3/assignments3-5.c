@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-void countOddAndEven(int originArrays[5]);
+void countOddAndEven(int originArrays[]);
 
 int main(int argc, const char * argv[]) {
     int orgArrays[5] = {32, 58, 3, 7, 4};
@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
     countOddAndEven(orgArrays);
     return 0;
 }
-void countOddAndEven(int originArrays[5])
+void countOddAndEven(int originArrays[])
 {
     int oddCounter = 0;
     for(int i = 0; i < 5; i++)
