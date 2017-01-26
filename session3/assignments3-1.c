@@ -19,7 +19,7 @@ void printArrayNumbers(void)
     int numbers[] = {5, 16, 3, 6, 8};
     for (int i=0; i<5; i++)
     {
-        printf("%d\n",arrays[i]);
+        printf("%d\n", numbers[i]);
     }
 }
 
