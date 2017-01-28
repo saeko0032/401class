@@ -20,7 +20,6 @@ int main(int argc, const char * argv[]) {
 
 void swap(int* num1, int* num2)
 {
-    
     *num1 = 20;
     *num2 = 10;
 }
