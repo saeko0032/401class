@@ -22,7 +22,9 @@ struct* cordinate;
 int main()
 {
   struct student student1 = {1, "Rajo", 90.5};
-  
+   struct student studen2 = {1, "Rajo", 90.5};
+   student1.id = 10;
+   student2->id = 10;
   struct student* ptrToStudent;
   struct student students[10];
 }
