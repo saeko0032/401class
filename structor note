@@ -1,0 +1,49 @@
+// global variable
+struct student
+{
+  int id; // type of value
+  char name[30];
+  float percentage;
+};
+
+struct stundent student1;
+struct stundent student2;
+
+struct cordinate
+{
+int id;
+char name[30];
+float percentage;
+struct point p1;
+struct* cordinate;
+// struct cordinate; // error //have to be pointer
+}
+
+int main()
+{
+  struct student student1 = {1, "Rajo", 90.5};
+  
+  struct student* ptrToStudent;
+  struct student students[10];
+}
+
+typeof struct
+{
+int i;
+char k;
+} element;
+
+element user;
+
+struct cordinate
+{
+int id;
+char name[30];
+float percentage;
+struct nastedPoint
+{
+int i;
+int j;
+} nestedPoint1;
+
+}
