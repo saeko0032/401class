@@ -21,7 +21,9 @@ struct machine
     char* memory;
 };
 struct time {
-    struct date* time;
+    int *day;
+    int *month;
+    int *year;
 };
 int main(int argc, const char * argv[]) {
     // date
@@ -36,20 +38,20 @@ int main(int argc, const char * argv[]) {
     mpu641->name = 10;
     // time
     struct time* times = (struct time*) malloc(sizeof(struct time));
-    times->time = (struct date*) malloc(sizeof(struct date));
-    times->time->day = 10;
-    struct time* sample = (struct time*) malloc(sizeof(struct time));
-    for(int i = 1; i < 13; i++)
+    int temp = 10;
+    times->day = &temp;
+    struct time* sample[10];
+    for(int i = 0; i < 10; i++)
     {
-        sample[i].time = (struct date*)malloc(sizeof(struct date));
-        sample[i].time->month = i;
-        printf("%d\n",sample[i].time->month);
+        sample[i] = (struct time*) malloc(sizeof(struct time));
     }
-    times->time->year = 2017;
+    int temp12 = 12;
+    sample[2]->month = &temp12;
+    
     printf("day value : %d address: %p\n",dates->day, &dates->day);
     printf("memory value : %s address: %p\n",mpu641->memory, &mpu641->memory);
     printf("mpu641 value : %d address: %p\n",mpu641->name, &mpu641->name);
-    printf("year value : %d address: %p\n",times->time->year, &times->time->year);
+    printf("sample value : %d address: %p\n",*sample[2]->month, sample[2]->month);
     // change the value
     int a = 20;
     int* b = &a;
@@ -60,11 +62,8 @@ int main(int argc, const char * argv[]) {
     int* d = &c;
     mpu641->name = *d;
     int e = 2018;
-    int* f = &e;
-    times->time->year = *f;
     printf("day value : %d address: %p\n",dates->day, &dates->day);
     printf("memory value : %s address: %p\n",mpu641->memory, &mpu641->memory);
     printf("mpu641 value : %d address: %p\n",mpu641->name, &mpu641->name);
-    printf("year value : %d address: %p\n",times->time->year, &times->time->year);
     return 0;
 }
