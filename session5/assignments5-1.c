@@ -61,9 +61,13 @@ int main(int argc, const char * argv[]) {
     struct machine **machineptr;
     *machineptr = mpu641;
 
+    struct time** timeptr;
+    timeptr = (struct time**) malloc(sizeof(struct time));
+    *timeptr = times;
+    
     printf("day value : %d address: %p\n",(*datesptr)->day, &(*datesptr)->day);
     printf("memory value : %s address: %p\n",(*machineptr)->memory, &(*machineptr)->memory);
-    printf("sample value : %d address: %p\n",*sample[2]->month, sample[2]->month);
+    printf("time value : %d address: %p\n",(*(*timeptr)->day),(*timeptr)->day) ;
     
     // change the value
     int a = 20;
@@ -74,8 +78,10 @@ int main(int argc, const char * argv[]) {
     int c = 2;
     int* d = &c;
     mpu641->name = *d;
+    int *newDay = b;
+    times->day = newDay;
     printf("day value : %d address: %p\n",(*datesptr)->day, &(*datesptr)->day);
     printf("memory value : %s address: %p\n",(*machineptr)->memory, &(*machineptr)->memory);
-   // printf("mpu641 value : %d address: %p\n",mpu641->name, &mpu641->name);
+    printf("time value : %d address: %p\n",(*(*timeptr)->day),(*timeptr)->day);
     return 0;
 }
