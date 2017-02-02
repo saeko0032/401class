@@ -1,39 +1,51 @@
-
 //
 //  main.c
-//  assignments6-1
+//  assignments5-3
 //
-//  Created by saekof on 2017-01-31.
-//  Copyright © 2017 CICCC. All rights reserved.
+//  Created by saeko fukui on 2017-01-31.
+//  Copyright © 2017 Saeko Fukui. All rights reserved.
 //
 
 #include <stdio.h>
 #include <stdlib.h>
-void increase(int data[], int counter);
+struct item
+{
+    int age;
+    struct item* next; /* nexr item pointer */
+};
+struct item* ptrStruct(void);
 
 int main(int argc, const char * argv[]) {
-    int flg = 1;
-    int counter = 0;
-    int *point = malloc(1 * sizeof(int));
-    while (flg) {
-        printf("enter the number you want(except 0)\n");
-        
-        scanf("%d",&point[counter]);
-
-        if (0 >= &point[counter]) {
-            flg = 0;
-            // printf("oko");
-        }
-        else
-        {
-            counter++;
-            increase(point, counter);
-        }
-    }
-
+    struct item* tempItem = ptrStruct();
+   // int age = tempItem->next->age;
+    
+//    for(int i = 0; i< 10; i++)
+//    {
+//        printf("age : %d",tempItem->age);
+//    }
+    return 0;
 }
 
-void increase(int data[], int counter)
+struct item* ptrStruct(void)
 {
-    data = realloc(data, (counter + 1) * sizeof *data);
+    struct item *tempItem =(struct item*)  malloc(sizeof(struct item));
+    
+    struct item item1[20];
+    
+    item1[0] = *tempItem;
+    
+    for(int i = 0; i< 10; i++)
+    {
+        printf("what is your prefer number?");
+        scanf("%d",&item1[i].age);
+        item1[i].next =(struct item*)  malloc(sizeof(struct item));
+        printf("%p",item1[i].next);
+    }
+
+    for(int j=0;j<10;j++)
+    {
+        item1[j].next = item1[j+1].next;
+        printf("%d\n",item1[j].age);
+    }
+    return item1;
 }
