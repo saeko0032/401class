@@ -62,7 +62,7 @@ int main(int argc, const char * argv[]) {
     struct machine **machineptr;
     *machineptr = mpu641;
 
-    struct time** timeptr;
+    struct time **timeptr;
     timeptr = (struct time**) malloc(sizeof(struct time));
     *timeptr = times;
     
