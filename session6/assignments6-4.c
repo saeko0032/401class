@@ -14,12 +14,12 @@
 
 int main(int argc, const char * argv[]) {
     // problem4-1
-    char str [5][256];
+    char str [SIZEY][SIZEX];
     
-    for(int i = 0; i<5; i++)
+    for(int i = 0; i < SIZEY; i++)
     {
         printf("enter some words\n");
-        scanf("%[^\n]",&str[i][0]);
+        fgets(&str[i][0],SIZEX, stdin);
     }
  
     // problem 4-2
