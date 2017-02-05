@@ -16,7 +16,9 @@ char name[30];
 float percentage;
 struct point p1;
 struct* cordinate;
-// struct cordinate; // error //have to be pointer
+// struct cordinate;
+// error
+//have to be pointer
 }
 
 int main()
